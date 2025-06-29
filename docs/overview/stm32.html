@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Microniq Labs">
+
+    <title>Microniq Labs Documentation</title>
+    
+    <link href="../css/docs.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"></link>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+    <!-- load at beginning -->
+    <script src="../../assets/js/homepage.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="row" style="margin: 0px;" id="navbar-container"></div>
+    
+    <!-- content -->
+    <div class="row" style="margin: 0px; padding-top:80px">
+        <div class="col-md-3 sidebar" id="sidebar">
+            <div class="row" style="margin: 0px;" id="sidebar-container">
+            </div>
+        </div>
+        <div class="col" id="main-content">
+            <div class="container docs-article">
+                <div class="row docs-section">
+                    <h1 class="docs-heading">STM32</h1>
+                </div>
+
+                <div class="row docs-section">
+                    <h2 class="section-heading">Apa itu STM32</h2>
+                    <p>
+                        STM32 adalah keluarga mikrokontroler berbasis ARM Cortex-M yang dibuat oleh perusahaan Eropa, STMicroelectronics.
+                        <br>
+                        Berbeda dengan Arduino yang berbasis mikrokontroler AVR 8-bit, STM32 menggunakan arsitektur 32-bit yang jauh lebih cepat, efisien, dan kaya fitur.
+                        <br>
+                        STM32 sering digunakan untuk:
+                        <li>Proyek performa tinggi (robotik, IoT, sensor akurasi tinggi)</li>
+                        <li>Aplikasi industri</li>
+                        <li>Prototipe alat pintar dan perangkat wearable</li>
+                    </p>
+                </div>
+                <div class="row docs-section">
+                    <h2 class="section-heading">Kenapa STM32 Lebih Canggih?</h2>
+                    <div class="col" style="text-align: center;">
+                        <img src="../img/stm32-bluepill.jpg" style="width: 400px; object-fit: contain;">
+                    </div>
+                    <br>
+
+                    <p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Fitur</th>
+                                <th scope="col">STM32 (contoh: STM32F103C8T8)</th>
+                                <th scope="col">Arduino Uno</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Arsitektur</td>
+                                <td>ARM Cortex-M3 (32-bit)</td>
+                                <td>AVR (8-bit)</td>
+                                </tr>
+
+                                <tr>
+                                <td>Kecepatan Clock</td>
+                                <td>72 MHz</td>
+                                <td>16 MHz</td>
+                                </tr>
+                                <tr>
+                                <td>Tegangan Operasi</td>
+                                <td>3.3V</td>
+                                <td>5V</td>
+                                </tr>
+                                <tr>
+                                <td>Jumlah GPIO</td>
+                                <td>Hingga 37 pin</td>
+                                <td>20-an pin</td>
+                                </tr>
+                                <tr>
+                                <td>Komunikasi</td>
+                                <td>UART, SPI, I2C, CAN, USB, dll.</td>
+                                <td>UART, SPI, I2C</td>
+                                </tr>
+                                <tr>
+                                <td>Efisiensi Daya</td>
+                                <td>Sangat baik (low power modes)</td>
+                                <td>Cukup tinggi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                    <p>
+                        STM32 memiliki banyak varian dari STM32F0 (low-cost) sampai STM32H7 (high-performance), jadi kamu bisa menyesuaikan dengan kebutuhan proyek.
+                    </p>
+                </div>
+
+                <div class="row docs-section">
+                    <h2 class="section-heading">Apakah STM32 Lebih Sulit?</h2>
+                    <p>
+                        Ya, sedikit lebih menantang
+                        <br>
+                        Karena:
+                        <li>Perlu flashing dengan programmer eksternal</li>
+                        <li>Setup awal software lebih kompleks</li>
+                        <li>Dokumentasi lebih teknis (banyak istilah STM)</li>
+
+                    </p>
+                
+                </div>
+                <div class="row docs-section">
+                    <h2 class="section-heading">Kesimpulan</h2>
+                    <p>
+                        STM32 adalah pilihan ideal bagi kamu yang ingin naik level dari Arduino ke sistem yang lebih profesional. 
+                        Dengan harga mirip Arduino Nano, kamu bisa mendapatkan kekuatan mikrokontroler 32-bit yang digunakan di berbagai aplikasi industri dan IoT.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script>        
+        let initChapter = "overview-list > overview-stm32";
+    </script>
+    <script src="../js/sidebar.js"></script>
+
+
+
+
+</body>
+</html>

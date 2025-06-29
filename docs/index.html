@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Microniq Labs">
+
+    <title>Microniq Labs Documentation</title>
+    
+    <link href="./css/docs.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"></link>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="row" style="margin: 0px;" id="navbar-container"></div>
+    
+    <!-- content -->
+    <div class="row" style="margin: 0px; padding-top:20px">
+        <div class="col-md-3 sidebar" id="sidebar">
+            <div class="row" style="margin: 0px;" id="sidebar-container">
+            </div>
+        </div>
+        <div class="col-md-9" id="main-content">ss</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+<script>
+    const collapsedSymbol = "▸";
+    const expandedSymbol = "▾";
+    let initChapter = "tutorial-list > analog";
+
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+        });
+
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('sidebar-container').innerHTML = html;
+
+            // Collapse/expand group titles
+            document.querySelectorAll('.list-group-title').forEach(title => {
+                title.addEventListener('click', () => {
+                    const targetId = title.getAttribute('data-toggle-id');
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        target.style.display = (target.style.display === 'none') ? 'block' : 'none';
+                    }
+                });
+            });
+
+            // Toggle sublists
+            document.querySelectorAll('[data-toggle-sub]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const subId = btn.getAttribute('data-toggle-sub');
+                    const sub = document.getElementById(subId);
+                    if (!sub) return;
+
+                    const isVisible = sub.style.display === 'block';
+                    sub.style.display = isVisible ? 'none' : 'block';
+
+                    const labelText = btn.textContent.replace(collapsedSymbol, '').replace(expandedSymbol, '').trim();
+                    btn.innerHTML = labelText + ' ' + (isVisible ? collapsedSymbol : expandedSymbol);
+                });
+            });
+
+            // Active state
+            document.querySelectorAll('.list-group-item-action').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.list-group-item-action').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+
+            // ✅ Now safe to apply initial active path
+            setInitialByIdPath(initChapter);
+        });
+
+    // This stays outside to be reusable
+    function setInitialByIdPath(path) {
+        const ids = path.split(">").map(p => p.trim());
+        console.log(ids);
+        ids.forEach((id, index) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            if (el.classList.contains('list-group') || el.classList.contains('sub-list-group')) {
+                el.style.display = 'block';
+            }
+
+            if (index === ids.length - 1 && el.classList.contains('list-group-item-action')) {
+                el.classList.add('active');
+            }
+
+            if (el.classList.contains('sub-list-group')) {
+                const toggleBtn = document.querySelector(`[data-toggle-sub="${id}"]`);
+                if (toggleBtn) {
+                    const labelText = toggleBtn.textContent.replace(collapsedSymbol, '').replace(expandedSymbol, '').trim();
+                    toggleBtn.innerHTML = labelText + ' ' + expandedSymbol;
+                }
+            }
+        });
+    }
+</script>
+
+
+
+</body>
+</html>

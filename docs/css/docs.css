@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+    color: #5d6778 !important;
+}
+
+.navbar{
+    background-color: #fff !important;
+    height: 70px;
+}
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 0;
+    color: #053965 !important;
+    font-size: 1.75rem !important;
+    font-weight: bold;
+}
+
+.sidebar {
+    position: fixed;
+    top: 70px;                        /* adjust if you have a fixed navbar */
+    left: 0;
+    width: 300px !important;                     /* override Bootstrap column width */
+    height: calc(100vh - 70px - 20px); /* full height minus top/bottom space */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;          /* optional: make sure it doesn’t appear transparent */
+    z-index: 1000;                   /* stay above other content */
+    border-right: 1px solid #ddd;    /* optional: visible separation */
+}
+
+#main-content {
+    margin-left: 300px; /* match sidebar width */
+}
+
+
+.text-alt{
+    font-weight: 100;
+}
+
+.list-group{
+    border-radius: 0px 10px 10px 0px !important;
+    padding-left: 10px !important;
+}
+
+.list-group-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #053965;
+    font-weight: bold;
+}
+
+.list-group-title-text{
+    margin-top:-24px !important; 
+    margin-left: 30px;
+}
+
+.list-group-title-icon{
+    font-size: 24px;
+}
+
+.list-group-item{
+    border-radius: 0px 10px 10px 0px;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 0px !important;
+}
+
+.list-group-item.active{
+    z-index: 2;
+    color: #053965 !important;
+    font-weight: bold;
+    background-color: #05386533 !important;
+
+    border-left-color: #053965 !important;
+    border-left-width: 3px !important;
+}
+
+.sub-list-group{
+    border-radius: 0px 10px 10px 0px;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 0px !important;
+}
+.sub-list-group .list-group-item {
+    padding-left: 30px;
+    font-size: 90%;
+}
+
+.docs-article{
+    padding: 2rem !important;
+}
+
+.docs-heading{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: #252930;
+    font-weight: 600;
+}
+
+.docs-section{
+    padding: 1rem !important;
+}
+
+.section-heading{
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+    color: #252930;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Microniq Labs">
+
+    <title>Microniq Labs Documentation</title>
+    
+    <link href="../css/docs.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"></link>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+        <!-- load at beginning -->
+    <script src="../../assets/js/homepage.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="row" style="margin: 0px;" id="navbar-container"></div>
+    
+    <!-- content -->
+    <div class="row" style="margin: 0px; padding-top:80px">
+        <div class="col-md-3 sidebar" id="sidebar">
+            <div class="row" style="margin: 0px;" id="sidebar-container">
+            </div>
+        </div>
+        <div class="col" id="main-content">
+            <div class="container docs-article">
+                <div class="row docs-section">
+                    <h1 class="docs-heading">Mikrokontroler</h1>
+                </div>
+                
+                <div class="row docs-section">
+                    <h2 class="section-heading">Pendahuluan</h2>
+                    <p>
+                        Dalam dunia elektronik modern, hampir semua perangkat pintar memiliki satu hal yang sama: mikrokontroler. 
+                        Dari mesin cuci, remote TV, hingga sistem smart home — semua dikendalikan oleh chip kecil ini. 
+                        Tapi, apa sebenarnya mikrokontroler itu? Dan mengapa penting untuk dipelajari?
+                    </p>
+                </div>
+                <div class="row docs-section">
+                    <h2 class="section-heading">Apa itu Mikrokontroler</h2>
+                    <p>
+                        Mikrokontroler adalah sebuah chip kecil berisi "komputer mini" yang bisa menjalankan program sederhana. 
+                        Ia memiliki komponen penting dalam satu paket:
+                        <li>CPU (otak komputasi)</li>
+                        <li>Memori (RAM dan ROM)</li>
+                        <li>Input/Output (pin untuk berkomunikasi dengan dunia luar)</li>
+                        <br>
+                        Artinya, hanya dengan satu chip, kamu bisa membaca sensor, mengolah data, dan mengontrol output seperti LED, motor, atau layar.
+                    </p>
+                </div>
+
+                <div class="row docs-section">
+                    <h2 class="section-heading">Mikrokontroler vs. Mikroprosesor</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Mikrokontroler</th>
+                            <th scope="col">Mikroprosesor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Semua komponen utama dalam satu chip</td>
+                            <td>Perlu komponen eksternal (RAM, I/O, dll)</td>
+                            </tr>
+                            <tr>
+                            <td>Digunakan pada sistem tertanam (embedded)</td>
+                            <td>Digunakan di komputer, laptop, dll</td>
+                            </tr>
+                            <tr>
+                            <td>Hemat daya, kecil, dan murah</td>
+                            <td>Lebih kuat, tapi lebih kompleks</td>
+                            </tr>
+                            <tr>
+                            <td>Contoh: ATmega328, STM32</td>
+                            <td>Contoh: Intel Core i7, AMD Ryzen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+            
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script>        
+        let initChapter = "overview-list > overview-mikrokontroler";
+    </script>
+    <script src="../js/sidebar.js"></script>
+
+
+
+
+</body>
+</html>

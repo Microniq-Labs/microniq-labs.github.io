@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Microniq Labs">
+
+    <title>Microniq Labs Documentation</title>
+    
+    <link href="../css/docs.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"></link>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <!-- load at beginning -->
+    <script src="../../assets/js/homepage.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="row" style="margin: 0px;" id="navbar-container"></div>
+    
+    <!-- content -->
+    <div class="row" style="margin: 0px; padding-top:80px">
+        <div class="col-md-3 sidebar" id="sidebar">
+            <div class="row" style="margin: 0px;" id="sidebar-container">
+            </div>
+        </div>
+        <div class="col" id="main-content">
+            <div class="container docs-article">
+                <div class="row docs-section">
+                    <h1 class="docs-heading">Arduino</h1>
+                </div>
+
+                <div class="row docs-section">
+                    <h2 class="section-heading">Apa itu Arduino</h2>
+                    <p>
+                        Arduino adalah papan mikrokontroler open-source yang dirancang untuk membuat pemrograman elektronik menjadi mudah dan menyenangkan.
+                        Dengan Arduino, kamu bisa membuat berbagai proyek: dari menyalakan LED otomatis, membaca suhu ruangan, hingga mengontrol motor dan sensor — semuanya hanya dengan beberapa baris kode.
+                        <br>
+                        <br>
+                        Arduino sangat cocok untuk:
+                        <br>
+                        <li>Pemula yang belum pernah ngoding atau merakit elektronik</li>
+                        <li>Pelajar SMK/SMA yang ingin belajar sistem embedded</li>
+                        <li>Hobiis dan maker yang suka eksperimen elektronik</li>
+                        <li>Prototipe awal alat industri, smart home, dll.</li>
+                    </p>
+                </div>
+                <div class="row docs-section">
+                    <h2 class="section-heading">Apa Saja yang Ada di Board Arduino?</h2>
+                    <div class="col" style="text-align: center;">
+                        <img src="../img/arduino-uno.webp" style="width: 400px; object-fit: contain;">
+                    </div>
+                    <br>
+
+                    <p>
+                        Board Arduino memiliki beberapa komponen utama:
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Komponen</th>
+                                <th scope="col">Fungsi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>ATmega328P</td>
+                                <td>Mikrokontroler utama (otak-nya Arduino)</td>
+                                </tr>
+                                <tr>
+                                <td>Pin Digital (0-13)</td>
+                                <td>Mengirim atau membaca sinyal digital (HIGH/LOW)</td>
+                                </tr>
+                                <tr>
+                                <td>Pin Analog (A0-A5)</td>
+                                <td>Membaca sinyal analog dari sensor (misalnya potensiometer)</td>
+                                </tr>
+                                <tr>
+                                <td>Port USB</td>
+                                <td>Untuk upload program dari komputer</td>
+                                </tr>
+                                <tr>
+                                <td>Regulator 5V</td>
+                                <td>Menyediakan tegangan stabil ke seluruh bagian board</td>
+                                </tr>
+                                <tr>
+                                <td>Tombol Reset</td>
+                                <td>Untuk me-restart program yang berjalan</td>
+                                </tr>
+                                <tr>
+                                <td>LED Built-in</td>
+                                <td>Untuk debugging (misalnya LED pada pin 13)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+
+                <div class="row docs-section">
+                    <h2 class="section-heading">Versi Arduino yang Populer</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Versi Arduino</th>
+                            <th scope="col">Ukuran & Fitur</th>
+                            <th scope="col">Cocok Untuk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Arduino Uno</td>
+                            <td>Ukuran standar, port USB besar, 14 pin digital</td>
+                            <td>Pemula, belajar dasar</td>    
+                            </tr>
+                            <tr>
+                            <td>Arduino Nano</td>
+                            <td>Lebih kecil, port mini USB, cocok untuk breadboard</td>
+                            <td>Proyek portable, pelajar</td>    
+                            </tr>
+                            <tr>
+                            <td>Arduino Mega</td>
+                            <td>Banyak pin I/O, memori besar</td>
+                            <td>Proyek robot besar / sensor banyak</td>    
+                            </tr>
+                            <tr>
+                            <td>Arduino Leonardo</td>
+                            <td>Bisa jadi keyboard/mouse USB</td>
+                            <td>Proyek kontrol komputer</td>    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row docs-section">
+                    <h2 class="section-heading">Kesimpulan</h2>
+                    <p>
+                        Arduino adalah pintu masuk terbaik ke dunia mikrokontroler.
+                        Dengan harga yang terjangkau, komunitas besar, dan ratusan contoh proyek, kamu bisa langsung bereksperimen dan membangun sesuatu yang nyata — tanpa perlu pengalaman teknik sekalipun.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script>        
+        let initChapter = "overview-list > overview-arduino";
+    </script>
+    <script src="../js/sidebar.js"></script>
+
+
+
+</body>
+</html>

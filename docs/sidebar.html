@@ -1,0 +1,63 @@
+<div class="col">
+    <!-- Overview -->
+    <div class="row list-group-title" data-toggle-id="overview-list" style="cursor: pointer;">
+        <i class='bx bx-chip list-group-title-icon'></i>
+        <span class="list-group-title-text">Overview</span>
+    </div>
+    <div class="list-group" id="overview-list" style="display: none;">
+        <button type="button" class="list-group-item list-group-item-action" id="overview-mikrokontroler">Apa itu Mikrokontroler</button>
+        <button type="button" class="list-group-item list-group-item-action" id="overview-arduino">Arduino</button>
+        <button type="button" class="list-group-item list-group-item-action" id="overview-stm32">STM32</button>
+    </div>
+
+    <!-- Hardware -->
+    <div class="row list-group-title" data-toggle-id="hardware-list" style="cursor: pointer;">
+        <i class='bx bx-chip list-group-title-icon'></i>
+        <span class="list-group-title-text">Hardware</span>
+    </div>
+    <div class="list-group" id="hardware-list" style="display: none;">
+        <button type="button" class="list-group-item list-group-item-action" id="hardware-arduino">Arduino Family</button>
+        <button type="button" class="list-group-item list-group-item-action" id="hardware-stm32">STM32 Family</button>
+    </div>
+
+    <!-- Software -->
+    <div class="row list-group-title" data-toggle-id="software-list" style="cursor: pointer;">
+        <i class='bx bx-window-mac list-group-title-icon'></i>
+        <span class="list-group-title-text">Software</span>
+    </div>
+    <div class="list-group" id="software-list" style="display: none;">
+        <button type="button" class="list-group-item list-group-item-action">Instalasi Arduino IDE</button>
+        <button type="button" class="list-group-item list-group-item-action">Instalasi Driver CH340</button>
+        <button type="button" class="list-group-item list-group-item-action">Instalasi Board</button>
+        <button type="button" class="list-group-item list-group-item-action">Upload Firmware ke Board</button>
+        <button type="button" class="list-group-item list-group-item-action">Instalasi Library</button>
+    </div>
+
+    <!-- Tutorial -->
+    <div class="row list-group-title" data-toggle-id="tutorial-list" style="cursor: pointer;">
+        <i class='bx bx-code-alt list-group-title-icon'></i>
+        <span class="list-group-title-text">Tutorial</span>
+    </div>
+    <div class="list-group" id="tutorial-list" style="display: none;">
+        <button type="button" class="list-group-item list-group-item-action">Basic</button>
+
+        <!-- Digital with sublist -->
+        <button type="button" class="list-group-item list-group-item-action" data-toggle-sub="digital-sub">
+            Digital ▸
+        </button>
+        <div class="sub-list-group" id="digital-sub" style="display: none; margin-left: 20px;">
+            <button type="button" class="list-group-item list-group-item-action" id="digital-1">Digital 1</button>
+            <button type="button" class="list-group-item list-group-item-action" id="digital-2">Digital 2</button>
+        </div>
+
+        <button type="button" class="list-group-item list-group-item-action" id="analog">Analog</button>
+        <button type="button" class="list-group-item list-group-item-action">Komunikasi Serial</button>
+        <button type="button" class="list-group-item list-group-item-action">Komunikasi I2C</button>
+        <button type="button" class="list-group-item list-group-item-action">Komunikasi SPI</button>
+        <button type="button" class="list-group-item list-group-item-action">Timer</button>
+        <button type="button" class="list-group-item list-group-item-action">Sensor</button>
+        <button type="button" class="list-group-item list-group-item-action">Aktuator</button>
+    </div>
+
+
+</div>
